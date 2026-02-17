@@ -9,42 +9,43 @@
  *
  * NOTE: order of tests is purposeful, organized by suggested
  * implementation order of methods (ex: toString first, then setValue, etc.)
- * and later tests assume previous tests work (ex: equals needs getters to work).
+ * and later tests assume previous tests work (ex: equals needs getters to
+ * work).
  * See Algorithm below for details.
  *
- * @author Nery Chapeton-Lamas <nery@miracosta.edu>
+ * @author Christopher Brinson-Allen
  * @version 1.0
  */
 
 public class CardTester {
 	/*
-	 TESTER ALGORITHM FOR CARD CLASS:
-	 - test toString()
-	 - test setValue()
-	 	- valid data (data changes + return true)
-	 	- invalid data (no data change + return false)
-	 - test setSuit()
-	 	- valid data (data changes + return true)
-	 	- invalid data (no data change + return false)
-	 - test setAll()
-	 	- valid data (data changes + return true)
-	 	- invalid data (no data change + return false)
-	 - test Default Constructor
-	 - test Full Constructor
-	 	- valid data
-	 	- invalid data (should shutdown program)
-	 - test Copy Constructor
-	 	- valid data
-	 	- invalid data (null passed, should shutdown program)
-	 - test getSuit()
-	 - test getValue()
-	 - test getPrintValue()
-	 - test equals()
-	 	- mismatching object on both instance vars (returns false)
-	 	- mismatching object on value only (returns false)
-		- mismatching object on suit only (returns false)
-	 	- matching object, both instance vars the same (returns true)
-	 - test getPrintCard() and printCard() //user driver in Main
+	 * TESTER ALGORITHM FOR CARD CLASS:
+	 * - test toString()
+	 * - test setValue()
+	 * - valid data (data changes + return true)
+	 * - invalid data (no data change + return false)
+	 * - test setSuit()
+	 * - valid data (data changes + return true)
+	 * - invalid data (no data change + return false)
+	 * - test setAll()
+	 * - valid data (data changes + return true)
+	 * - invalid data (no data change + return false)
+	 * - test Default Constructor
+	 * - test Full Constructor
+	 * - valid data
+	 * - invalid data (should shutdown program)
+	 * - test Copy Constructor
+	 * - valid data
+	 * - invalid data (null passed, should shutdown program)
+	 * - test getSuit()
+	 * - test getValue()
+	 * - test getPrintValue()
+	 * - test equals()
+	 * - mismatching object on both instance vars (returns false)
+	 * - mismatching object on value only (returns false)
+	 * - mismatching object on suit only (returns false)
+	 * - matching object, both instance vars the same (returns true)
+	 * - test getPrintCard() and printCard() //user driver in Main
 	 */
 	
 	public static void main(String[] args) {
@@ -57,7 +58,7 @@ public class CardTester {
 		CardTester.testSetSuit();
 		
 		CardTester.testSetAll();
-		
+
 		// - test Default Constructor (implement default constructor,
 		//		then see toString() test to see if it passes)
 
@@ -72,7 +73,6 @@ public class CardTester {
 		CardTester.testGetPrintValue();
 
 		CardTester.testEquals();
-
 		// - test getPrintCard() and printCard() //use driver in Main
 	}
 
@@ -291,5 +291,4 @@ public class CardTester {
 		System.out.println("Testing both instance variables match:");
 		System.out.println("Are card " + original + " and card " + test + " the same? " + original.equals(test));
 	}
-
 }
